@@ -3,36 +3,15 @@ import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Section from "../components/section";
 import EventList from "../components/event-list";
-
-const featuredEvents = [
-  {
-    date: "12 Jul 2026",
-    isoDate: "2026-07-12",
-    venue: "Sommerbühne Kempten",
-    location: "Open-air rock night",
-    city: "Kempten, Allgäu",
-  },
-  {
-    date: "08 Aug 2026",
-    isoDate: "2026-08-08",
-    venue: "Gasthof Adler",
-    location: "Classic cover evening",
-    city: "Isny im Allgäu",
-  },
-  {
-    date: "19 Sep 2026",
-    isoDate: "2026-09-19",
-    venue: "Kulturschuppen",
-    location: "Vintage rock session",
-    city: "Memmingen",
-  },
-];
+import SocialLinks from "../components/social-links";
+import events from "../data/events.json";
+import socialLinks from "../data/social-links.json";
 
 /**
- * Description: Renders the landing page with hero, intro, event preview, and social links.
- * Dependencies: React, Gatsby Link, shared Layout, Section, and EventList components.
+ * Description: Renders the landing page with hero, intro, data-backed event preview, and social links.
+ * Dependencies: React, Gatsby Link, shared Layout, Section, EventList, SocialLinks, and JSON content imports.
  * Code-customers: Gatsby page routing for the repository root path.
- * Variables/origin: featuredEvents is temporary page-local content based on the README dates preview direction.
+ * Variables/origin: events and socialLinks are imported from src/data/ so previews can change without page code edits.
  */
 export default function IndexPage() {
   return (
@@ -57,18 +36,14 @@ export default function IndexPage() {
       </Section>
 
       <Section eyebrow="Next up" title="Upcoming dates">
-        <EventList events={featuredEvents} isPreview />
+        <EventList events={events} isPreview />
         <Link className="text-link" to="/dates/">
           View all dates
         </Link>
       </Section>
 
       <Section eyebrow="Follow" title="Stay connected" className="social-section">
-        <div className="social-links" aria-label="Social links">
-          <a href="mailto:booking@whitecreek.example.com">Booking</a>
-          <a href="https://www.instagram.com/" rel="noreferrer">Instagram</a>
-          <a href="https://www.facebook.com/" rel="noreferrer">Facebook</a>
-        </div>
+        <SocialLinks links={socialLinks} />
       </Section>
     </Layout>
   );

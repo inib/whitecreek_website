@@ -384,3 +384,41 @@ npm run develop
 ```bash
 npm run build
 ```
+
+---
+
+# Content Data
+
+Structured editorial content now lives in `src/data/` so routine updates can be made without changing page component code.
+
+## `src/data/events.json`
+
+Used by the landing page preview and the full dates page. Each event object supports:
+
+* `date`: ISO date (`YYYY-MM-DD`) used for sorting-ready content, the `<time>` element, and formatted display.
+* `venue`: venue or event title.
+* `city`: city/region display text.
+* `location`: short context line, such as the show format or room description.
+* `ticketUrl`: optional booking or ticket link.
+
+## `src/data/members.json`
+
+Used by the band portrait member cards. Each member object supports:
+
+* `name`: displayed member name or placeholder role name.
+* `instrument`: instrument/role eyebrow text.
+* `photo`: optional image path or URL. Empty values intentionally render a styled placeholder until final photos are available.
+* `description`: short member bio.
+
+## `src/data/social-links.json`
+
+Used by shared social link components. Each link object supports:
+
+* `label`: visible link text.
+* `url`: profile, contact, or mail URL.
+
+## Maintenance Notes
+
+* Future removal candidate: replace placeholder member names/photos in `src/data/members.json` once final band details are supplied.
+* Future removal candidate: replace generic Instagram/Facebook URLs in `src/data/social-links.json` with White Creek's production profiles.
+* Future removal candidate: replace gallery placeholders in `src/pages/band.js` with a structured gallery data file when final live photos are available.

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Lead Voice",
+    "instrument": "Vocals",
+    "photo": "",
+    "description": "Carries the choruses with grit and warmth."
+  },
+  {
+    "name": "Guitar",
+    "instrument": "Electric guitar",
+    "photo": "",
+    "description": "Keeps the riffs sharp, melodic, and road-tested."
+  },
+  {
+    "name": "Bass",
+    "instrument": "Bass",
+    "photo": "",
+    "description": "Locks the low end into the heartbeat of every song."
+  },
+  {
+    "name": "Drums",
+    "instrument": "Drums",
+    "photo": "",
+    "description": "Drives the set with steady classic-rock momentum."
+  }
+]
