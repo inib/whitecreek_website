@@ -1,27 +1,8 @@
 [
   {
-    "date": "2026-07-12",
-    "venue": "Sommerbühne Kempten",
-    "city": "Kempten, Allgäu",
+    "date": "2026-06-05",
+    "venue": "Kurpark Nesselwang",
+    "city": "Nesselwang",
     "location": "Open-air rock night"
-  },
-  {
-    "date": "2026-08-08",
-    "venue": "Gasthof Adler",
-    "city": "Isny im Allgäu",
-    "location": "Classic cover evening"
-  },
-  {
-    "date": "2026-09-19",
-    "venue": "Kulturschuppen",
-    "city": "Memmingen",
-    "location": "Vintage rock session"
-  },
-  {
-    "date": "2026-10-24",
-    "venue": "Alte Mühle",
-    "city": "Wangen im Allgäu",
-    "location": "Autumn club show",
-    "ticketUrl": "mailto:booking@whitecreek.example.com?subject=Tickets%20Alte%20M%C3%BChle%202026-10-24"
   }
 ]
