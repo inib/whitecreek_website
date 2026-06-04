@@ -347,15 +347,15 @@ The repository root now contains a minimal Gatsby application scaffold that foll
 
 * `package.json` defines the Gatsby project metadata, scripts, Node engine, and the runtime dependencies: Gatsby, React, and React DOM.
 * `gatsby-config.js` stores basic White Creek site metadata. The exported configuration object is intentionally small; its values originate from this README project overview and can be reused by future SEO helpers.
-* `gatsby-browser.js` imports the global stylesheet once for all Gatsby browser-rendered pages.
+* `gatsby-browser.js` imports `src/styles/global.css` once through Gatsby's browser setup so every browser-rendered page receives the same base styles.
 * `src/pages/index.js` renders the landing page with a hero, intro copy, upcoming dates preview, and social links.
 * `src/pages/band.js` renders the band portrait page with story, member cards, and gallery placeholders.
-* `src/pages/dates.js` renders the upcoming shows page with a static event list.
+* `src/pages/dates.js` renders the upcoming shows page with the shared event list and structured event data.
 * `src/components/layout.js` provides the shared page shell, masthead, navigation slot, main content, and footer.
 * `src/components/navigation.js` provides reusable internal navigation based on the README site structure.
 * `src/components/section.js` provides a reusable content-section wrapper for consistent spacing and headings.
 * `src/components/event-list.js` provides the reusable event-list presentation used by the landing and dates pages.
-* `src/styles/global.css` contains mobile-first global styling, including the dark `#0f0401` background, warm light text, and ocher accents.
+* `src/styles/global.css` is the central styling entry point. It defines the design-token custom properties for colors, font stacks, and a mobile-first spacing scale before applying global layout/component classes.
 
 ## Component documentation convention
 
@@ -366,11 +366,24 @@ Each exported page or reusable component includes a short JSDoc block that docum
 * Code-customers: which pages or Gatsby runtime features consume it.
 * Variables/origin: where important props, constants, or generated values come from.
 
+## Global styling entry point
+
+`src/styles/global.css` is imported by `gatsby-browser.js`, making it the single browser-side entry point for shared styling.
+
+The stylesheet currently defines these custom property groups:
+
+* Colors: `--color-background` (`#0f0401`), primary/secondary text aliases (`--color-text-primary`, `--color-text-secondary`), and three ocher accents (`--color-accent-primary`, `--color-accent-secondary`, `--color-accent-tertiary`). Compatibility aliases such as `--color-text`, `--color-muted`, `--color-accent`, `--color-accent-dark`, and `--color-accent-soft` remain available for existing selectors.
+* Typography: `--font-heading` for serif display headings and `--font-body` for readable sans-serif body text.
+* Mobile-first spacing: `--space-0` through `--space-24` provide reusable spacing increments, while `--space-page-inline` starts compact on mobile and increases at the tablet breakpoint.
+* Layout: `--max-width` controls the readable page width used by the header, footer, hero, and content sections.
+
+When adding new styling, prefer these tokens over hard-coded repeated values so the visual system remains centralized.
+
 ## Future removal candidates
 
-* The event arrays in `src/pages/index.js` and `src/pages/dates.js` are seed content only. Move them into a JSON content file later so dates can be updated without editing page code.
-* The member and gallery placeholders in `src/pages/band.js` should be replaced when final member names, instruments, bios, and photos are available.
-* The placeholder contact and social URLs in `src/pages/index.js` should be replaced with official White Creek links before launch.
+* The member and gallery placeholders in `src/pages/band.js` and placeholder records in `src/data/members.json` should be replaced when final member names, instruments, bios, and photos are available.
+* The generic social URLs in `src/data/social-links.json` should be replaced with official White Creek links before launch.
+* No unused JavaScript modules were identified while adding the global style entry point. Keep reviewing placeholder CSS classes as final imagery and content arrive.
 
 ## Local development
 
