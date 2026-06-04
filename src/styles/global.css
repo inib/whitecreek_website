@@ -1,0 +1,261 @@
+:root {
+  --color-background: #0f0401;
+  --color-surface: #1a0b05;
+  --color-text: #f3eee7;
+  --color-muted: #ddd5c8;
+  --color-accent: #b98b3a;
+  --color-accent-dark: #8f6b2c;
+  --color-accent-soft: #caa56a;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: Inter, "Source Sans Pro", "Open Sans", Arial, sans-serif;
+  --max-width: 68rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(185, 139, 58, 0.14), transparent 16rem),
+    var(--color-background);
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  color: var(--color-muted);
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.05;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 18vw, 8rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(2rem, 10vw, 4rem);
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+.site-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header,
+.site-footer,
+.hero,
+.content-section {
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+}
+
+.site-header {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem 0 0;
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.brand__name {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand__tag,
+.eyebrow {
+  color: var(--color-accent-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.site-nav a,
+.button,
+.text-link,
+.social-links a {
+  border: 1px solid rgba(202, 165, 106, 0.38);
+  border-radius: 999px;
+  color: var(--color-text);
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  transition: border-color 160ms ease, color 160ms ease, background 160ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a.is-active,
+.button,
+.text-link:hover,
+.social-links a:hover {
+  background: rgba(185, 139, 58, 0.12);
+  border-color: var(--color-accent);
+  color: var(--color-accent-soft);
+}
+
+main {
+  flex: 1;
+}
+
+.hero {
+  display: grid;
+  gap: 1.25rem;
+  min-height: 68vh;
+  padding: 6rem 0 4rem;
+  place-content: center start;
+}
+
+.hero__copy,
+.lead {
+  max-width: 42rem;
+  font-size: clamp(1.1rem, 4vw, 1.35rem);
+}
+
+.button,
+.text-link {
+  display: inline-flex;
+  justify-self: start;
+  width: fit-content;
+}
+
+.content-section {
+  display: grid;
+  gap: 1.25rem;
+  padding: 4rem 0;
+}
+
+.section-heading {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.section-body {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.event-list,
+.member-grid,
+.gallery-grid,
+.social-links {
+  display: grid;
+  gap: 1rem;
+}
+
+.event-card,
+.member-card {
+  background: rgba(26, 11, 5, 0.82);
+  border: 1px solid rgba(202, 165, 106, 0.18);
+  border-radius: 1.25rem;
+  padding: 1rem;
+}
+
+.event-card {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.event-card time {
+  color: var(--color-accent-soft);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+}
+
+.event-card__city {
+  color: var(--color-accent);
+}
+
+.member-card {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.image-placeholder {
+  aspect-ratio: 4 / 3;
+  background:
+    linear-gradient(135deg, rgba(185, 139, 58, 0.24), rgba(15, 4, 1, 0.3)),
+    var(--color-surface);
+  border: 1px solid rgba(202, 165, 106, 0.18);
+  border-radius: 1rem;
+}
+
+.image-placeholder--wide {
+  aspect-ratio: 16 / 10;
+}
+
+.social-links {
+  grid-template-columns: repeat(auto-fit, minmax(8rem, max-content));
+}
+
+.site-footer {
+  border-top: 1px solid rgba(202, 165, 106, 0.18);
+  padding: 2rem 0;
+}
+
+@media (min-width: 48rem) {
+  .site-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content-section {
+    grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 1.4fr);
+  }
+
+  .event-card {
+    align-items: center;
+    grid-template-columns: 10rem 1fr;
+  }
+
+  .member-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .image-placeholder--wide {
+    grid-column: span 2;
+  }
+}
