@@ -15,8 +15,7 @@ export default function DatesPage() {
     <Layout>
       <Section eyebrow="Dates" title="Upcoming shows">
         <p className="lead">
-          Dates are maintained in one structured JSON file for the preview and full
-          dates page. Future removal candidate: no unused page-local event arrays remain.
+          Upcoming White Creek classic rock cover band shows.
         </p>
         <EventList events={events} />
       </Section>
