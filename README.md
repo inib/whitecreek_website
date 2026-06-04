@@ -336,3 +336,51 @@ Prioritize:
 3. Atmosphere
 4. Mobile usability
 5. Easy maintenance
+
+---
+
+# Initial Gatsby Structure
+
+The repository root now contains a minimal Gatsby application scaffold that follows the design direction above while keeping JavaScript light and content easy to edit.
+
+## Files and responsibilities
+
+* `package.json` defines the Gatsby project metadata, scripts, Node engine, and the runtime dependencies: Gatsby, React, and React DOM.
+* `gatsby-config.js` stores basic White Creek site metadata. The exported configuration object is intentionally small; its values originate from this README project overview and can be reused by future SEO helpers.
+* `gatsby-browser.js` imports the global stylesheet once for all Gatsby browser-rendered pages.
+* `src/pages/index.js` renders the landing page with a hero, intro copy, upcoming dates preview, and social links.
+* `src/pages/band.js` renders the band portrait page with story, member cards, and gallery placeholders.
+* `src/pages/dates.js` renders the upcoming shows page with a static event list.
+* `src/components/layout.js` provides the shared page shell, masthead, navigation slot, main content, and footer.
+* `src/components/navigation.js` provides reusable internal navigation based on the README site structure.
+* `src/components/section.js` provides a reusable content-section wrapper for consistent spacing and headings.
+* `src/components/event-list.js` provides the reusable event-list presentation used by the landing and dates pages.
+* `src/styles/global.css` contains mobile-first global styling, including the dark `#0f0401` background, warm light text, and ocher accents.
+
+## Component documentation convention
+
+Each exported page or reusable component includes a short JSDoc block that documents:
+
+* Description: what the function renders or configures.
+* Dependencies: imported libraries, Gatsby APIs, or local components it relies on.
+* Code-customers: which pages or Gatsby runtime features consume it.
+* Variables/origin: where important props, constants, or generated values come from.
+
+## Future removal candidates
+
+* The event arrays in `src/pages/index.js` and `src/pages/dates.js` are seed content only. Move them into a JSON content file later so dates can be updated without editing page code.
+* The member and gallery placeholders in `src/pages/band.js` should be replaced when final member names, instruments, bios, and photos are available.
+* The placeholder contact and social URLs in `src/pages/index.js` should be replaced with official White Creek links before launch.
+
+## Local development
+
+```bash
+npm install
+npm run develop
+```
+
+## Production build
+
+```bash
+npm run build
+```

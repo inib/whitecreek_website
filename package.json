@@ -1,0 +1,22 @@
+{
+  "name": "whitecreek-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static Gatsby website for White Creek, a classic rock cover band from the Allgäu region.",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^5.16.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20"
+  }
+}
