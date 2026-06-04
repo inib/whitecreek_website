@@ -1,19 +1,14 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Section from "../components/section";
-
-const members = [
-  { name: "Lead Voice", instrument: "Vocals", note: "Carries the choruses with grit and warmth." },
-  { name: "Guitar", instrument: "Electric guitar", note: "Keeps the riffs sharp, melodic, and road-tested." },
-  { name: "Bass", instrument: "Bass", note: "Locks the low end into the heartbeat of every song." },
-  { name: "Drums", instrument: "Drums", note: "Drives the set with steady classic-rock momentum." },
-];
+import MemberList from "../components/member-list";
+import members from "../data/members.json";
 
 /**
- * Description: Presents the White Creek band portrait with story, members, and gallery placeholders.
- * Dependencies: React, shared Layout, and Section components.
+ * Description: Presents the White Creek band portrait with story, data-backed members, and gallery placeholders.
+ * Dependencies: React, shared Layout, Section, MemberList, and src/data/members.json.
  * Code-customers: Gatsby page routing for /band/.
- * Variables/origin: members is temporary editorial content until final band bios and photos are supplied.
+ * Variables/origin: members is imported structured content; empty photo values intentionally keep placeholders until final photos arrive.
  */
 export default function BandPage() {
   return (
@@ -27,16 +22,7 @@ export default function BandPage() {
       </Section>
 
       <Section eyebrow="Members" title="On stage">
-        <div className="member-grid">
-          {members.map((member) => (
-            <article className="member-card" key={member.instrument}>
-              <div className="image-placeholder" aria-hidden="true" />
-              <p className="eyebrow">{member.instrument}</p>
-              <h3>{member.name}</h3>
-              <p>{member.note}</p>
-            </article>
-          ))}
-        </div>
+        <MemberList members={members} />
       </Section>
 
       <Section eyebrow="Gallery" title="Live moments">

@@ -115,7 +115,8 @@ h3 {
 .site-nav a,
 .button,
 .text-link,
-.social-links a {
+.social-links a,
+.event-card__ticket {
   border: 1px solid rgba(202, 165, 106, 0.38);
   border-radius: 999px;
   color: var(--color-text);
@@ -129,7 +130,8 @@ h3 {
 .site-nav a.is-active,
 .button,
 .text-link:hover,
-.social-links a:hover {
+.social-links a:hover,
+.event-card__ticket:hover {
   background: rgba(185, 139, 58, 0.12);
   border-color: var(--color-accent);
   color: var(--color-accent-soft);
@@ -210,6 +212,21 @@ main {
 .member-card {
   display: grid;
   gap: 0.75rem;
+}
+
+.event-card__ticket {
+  display: inline-flex;
+  margin-top: 0.85rem;
+  width: fit-content;
+}
+
+.member-photo {
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(202, 165, 106, 0.18);
+  border-radius: 1rem;
+  display: block;
+  object-fit: cover;
+  width: 100%;
 }
 
 .image-placeholder {
