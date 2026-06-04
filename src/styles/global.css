@@ -1,14 +1,44 @@
+/*
+ * Global design tokens and base styles for White Creek.
+ * Dependencies: Imported once by gatsby-browser.js; consumed by Gatsby pages and components through class names.
+ * Code-customers: Layout, navigation, hero, section, event, member, gallery, and social-link markup.
+ * Variables/origin: Colors and typography come from README design direction; spacing tokens are mobile-first and scale up at wider viewports.
+ */
 :root {
   --color-background: #0f0401;
   --color-surface: #1a0b05;
-  --color-text: #f3eee7;
-  --color-muted: #ddd5c8;
-  --color-accent: #b98b3a;
-  --color-accent-dark: #8f6b2c;
-  --color-accent-soft: #caa56a;
+  --color-text-primary: #f3eee7;
+  --color-text-secondary: #ddd5c8;
+  --color-text: var(--color-text-primary);
+  --color-muted: var(--color-text-secondary);
+  --color-accent-primary: #b98b3a;
+  --color-accent-secondary: #8f6b2c;
+  --color-accent-tertiary: #caa56a;
+  --color-accent: var(--color-accent-primary);
+  --color-accent-dark: var(--color-accent-secondary);
+  --color-accent-soft: var(--color-accent-tertiary);
   --font-heading: Georgia, "Times New Roman", serif;
   --font-body: Inter, "Source Sans Pro", "Open Sans", Arial, sans-serif;
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-page-inline: var(--space-4);
   --max-width: 68rem;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --space-page-inline: var(--space-8);
+  }
 }
 
 * {
@@ -73,14 +103,14 @@ h3 {
 .site-footer,
 .hero,
 .content-section {
-  width: min(100% - 2rem, var(--max-width));
+  width: min(100% - (var(--space-page-inline) * 2), var(--max-width));
   margin-inline: auto;
 }
 
 .site-header {
   display: grid;
-  gap: 1rem;
-  padding: 1.25rem 0 0;
+  gap: var(--space-4);
+  padding: var(--space-5) 0 0;
 }
 
 .brand {
@@ -109,7 +139,7 @@ h3 {
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
 
 .site-nav a,
@@ -121,7 +151,7 @@ h3 {
   border-radius: 999px;
   color: var(--color-text);
   min-height: 2.75rem;
-  padding: 0.7rem 1rem;
+  padding: 0.7rem var(--space-4);
   text-decoration: none;
   transition: border-color 160ms ease, color 160ms ease, background 160ms ease;
 }
@@ -143,9 +173,9 @@ main {
 
 .hero {
   display: grid;
-  gap: 1.25rem;
+  gap: var(--space-5);
   min-height: 68vh;
-  padding: 6rem 0 4rem;
+  padding: var(--space-24) 0 var(--space-16);
   place-content: center start;
 }
 
@@ -164,18 +194,18 @@ main {
 
 .content-section {
   display: grid;
-  gap: 1.25rem;
-  padding: 4rem 0;
+  gap: var(--space-5);
+  padding: var(--space-16) 0;
 }
 
 .section-heading {
   display: grid;
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
 
 .section-body {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--space-6);
 }
 
 .event-list,
@@ -183,7 +213,7 @@ main {
 .gallery-grid,
 .social-links {
   display: grid;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .event-card,
@@ -191,12 +221,12 @@ main {
   background: rgba(26, 11, 5, 0.82);
   border: 1px solid rgba(202, 165, 106, 0.18);
   border-radius: 1.25rem;
-  padding: 1rem;
+  padding: var(--space-4);
 }
 
 .event-card {
   display: grid;
-  gap: 0.75rem;
+  gap: var(--space-3);
 }
 
 .event-card time {
@@ -211,12 +241,12 @@ main {
 
 .member-card {
   display: grid;
-  gap: 0.75rem;
+  gap: var(--space-3);
 }
 
 .event-card__ticket {
   display: inline-flex;
-  margin-top: 0.85rem;
+  margin-top: var(--space-3);
   width: fit-content;
 }
 
@@ -248,7 +278,7 @@ main {
 
 .site-footer {
   border-top: 1px solid rgba(202, 165, 106, 0.18);
-  padding: 2rem 0;
+  padding: var(--space-8) 0;
 }
 
 @media (min-width: 48rem) {
