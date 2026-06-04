@@ -1,26 +1,26 @@
 [
   {
-    "name": "Lead Voice",
-    "instrument": "Vocals",
+    "name": "Gerd",
+    "instrument": "Vocals, Gitarre",
     "photo": "",
-    "description": "Carries the choruses with grit and warmth."
+    "description": ""
   },
   {
-    "name": "Guitar",
-    "instrument": "Electric guitar",
+    "name": "Franz",
+    "instrument": "E-Gitarre",
     "photo": "",
-    "description": "Keeps the riffs sharp, melodic, and road-tested."
+    "description": ""
   },
   {
-    "name": "Bass",
+    "name": "Detlef",
     "instrument": "Bass",
     "photo": "",
-    "description": "Locks the low end into the heartbeat of every song."
+    "description": ""
   },
   {
-    "name": "Drums",
+    "name": "Korbi",
     "instrument": "Drums",
     "photo": "",
-    "description": "Drives the set with steady classic-rock momentum."
+    "description": ""
   }
 ]

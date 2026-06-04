@@ -17,23 +17,13 @@ export default function IndexPage() {
   return (
     <Layout>
       <section className="hero">
-        <p className="eyebrow">Allgäu · Classic Rock</p>
+        <p className="eyebrow">Weißbach · Pfronten · Allgäu · Classic Rock</p>
         <h1>White Creek</h1>
         <p className="hero__copy">
-          Handcrafted classic rock covers with warm vintage tone, honest stage energy,
-          and songs built for long nights.
+          Handcrafted classic rock covers. Warm vintage tone, honest on stage, 
+          songs built for long nights.
         </p>
-        <Link className="button" to="/dates/">
-          Upcoming Shows
-        </Link>
       </section>
-
-      <Section eyebrow="The band" title="Rock songs with Allgäu roots">
-        <p>
-          White Creek is a classic rock cover band from southern Germany, shaped by
-          guitar-driven favorites, warm harmonies, and a stripped-back stage presence.
-        </p>
-      </Section>
 
       <Section eyebrow="Next up" title="Upcoming dates">
         <EventList events={events} isPreview />

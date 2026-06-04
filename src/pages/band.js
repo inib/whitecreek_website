@@ -13,11 +13,11 @@ import members from "../data/members.json";
 export default function BandPage() {
   return (
     <Layout>
-      <Section eyebrow="Band portrait" title="A cover band with a lived-in rock sound">
+      <Section eyebrow="Band portrait" title="In Pfronten dahoam">
         <p>
-          White Creek brings familiar classic rock songs back to the room: direct,
-          warm, and without unnecessary polish. The band is rooted in the Allgäu and
-          built around songs that work best when people gather close to the stage.
+          <b>White Creek</b> nimmt euch mit bekannten Rock Klassikern auf eine Reise in die Vergangenheit und zurück.
+          Direkt, laut und unpoliert. Aus <b>Weißbach</b> in Pfronten im Allgäu bringen wir 
+          Pink FLoyd, Eric Clapton und Sunrise Avenue zu Euch auf die Bühnen.
         </p>
       </Section>
 

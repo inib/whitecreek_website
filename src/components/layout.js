@@ -18,7 +18,7 @@ export default function Layout({ children }) {
       </header>
       <main>{children}</main>
       <footer className="site-footer">
-        <p>© {currentYear} White Creek · Classic rock from the Allgäu</p>
+        <p>© {currentYear} White Creek · Allgäu Classic Rock</p>
       </footer>
     </div>
   );
