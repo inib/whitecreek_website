@@ -2,25 +2,25 @@
   {
     "name": "Gerd",
     "instrument": "Vocals, Gitarre",
-    "photo": "",
+    "photo": "/data/img/gerd.png",
     "description": ""
   },
   {
     "name": "Franz",
     "instrument": "E-Gitarre",
-    "photo": "",
+    "photo": "/data/img/franz.png",
     "description": ""
   },
   {
     "name": "Detlef",
     "instrument": "Bass",
-    "photo": "",
+    "photo": "/data/img/detlef.png",
     "description": ""
   },
   {
     "name": "Korbi",
     "instrument": "Drums",
-    "photo": "",
+    "photo": "/data/img/korbi.png",
     "description": ""
   }
 ]
