@@ -23,6 +23,10 @@ export default function IndexPage() {
           Handcrafted classic rock covers. Warm vintage tone, honest on stage, 
           songs built for long nights.
         </p>
+        <img
+          src="/img/kurpark_rep.png"
+          alt="White Creek live performance"
+        />
       </section>
 
       <Section eyebrow="Next up" title="Upcoming dates">
