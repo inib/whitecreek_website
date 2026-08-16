@@ -5,15 +5,15 @@
  * Variables/origin: Colors and typography come from README design direction; spacing tokens are mobile-first and scale up at wider viewports.
  */
 :root {
-  --color-background: #0f0401;
-  --color-surface: #1a0b05;
-  --color-text-primary: #f3eee7;
-  --color-text-secondary: #ddd5c8;
+  --color-background: #070605;
+  --color-surface: #171410;
+  --color-text-primary: #d2c0a8;
+  --color-text-secondary: #a7957f;
   --color-text: var(--color-text-primary);
   --color-muted: var(--color-text-secondary);
-  --color-accent-primary: #b98b3a;
-  --color-accent-secondary: #8f6b2c;
-  --color-accent-tertiary: #caa56a;
+  --color-accent-primary: #b7a187;
+  --color-accent-secondary: #746656;
+  --color-accent-tertiary: #c7ac8c;
   --color-accent: var(--color-accent-primary);
   --color-accent-dark: var(--color-accent-secondary);
   --color-accent-soft: var(--color-accent-tertiary);
@@ -56,7 +56,7 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top left, rgba(185, 139, 58, 0.14), transparent 16rem),
+    radial-gradient(circle at top left, rgba(183, 161, 135, 0.14), transparent 16rem),
     var(--color-background);
 }
 
@@ -147,7 +147,7 @@ h3 {
 .text-link,
 .social-links a,
 .event-card__ticket {
-  border: 1px solid rgba(202, 165, 106, 0.38);
+  border: 1px solid rgba(199, 172, 140, 0.38);
   border-radius: 999px;
   color: var(--color-text);
   min-height: 2.75rem;
@@ -162,7 +162,7 @@ h3 {
 .text-link:hover,
 .social-links a:hover,
 .event-card__ticket:hover {
-  background: rgba(185, 139, 58, 0.12);
+  background: rgba(183, 161, 135, 0.12);
   border-color: var(--color-accent);
   color: var(--color-accent-soft);
 }
@@ -218,8 +218,8 @@ main {
 
 .event-card,
 .member-card {
-  background: rgba(26, 11, 5, 0.82);
-  border: 1px solid rgba(202, 165, 106, 0.18);
+  background: rgba(23, 20, 16, 0.82);
+  border: 1px solid rgba(199, 172, 140, 0.18);
   border-radius: 1.25rem;
   padding: var(--space-4);
 }
@@ -252,7 +252,7 @@ main {
 
 .member-photo {
   aspect-ratio: 4 / 3;
-  border: 1px solid rgba(202, 165, 106, 0.18);
+  border: 1px solid rgba(199, 172, 140, 0.18);
   border-radius: 1rem;
   display: block;
   object-fit: cover;
@@ -262,9 +262,9 @@ main {
 .image-placeholder {
   aspect-ratio: 4 / 3;
   background:
-    linear-gradient(135deg, rgba(185, 139, 58, 0.24), rgba(15, 4, 1, 0.3)),
+    linear-gradient(135deg, rgba(183, 161, 135, 0.24), rgba(7, 6, 5, 0.3)),
     var(--color-surface);
-  border: 1px solid rgba(202, 165, 106, 0.18);
+  border: 1px solid rgba(199, 172, 140, 0.18);
   border-radius: 1rem;
 }
 
@@ -289,7 +289,7 @@ main {
 }
 
 .site-footer {
-  border-top: 1px solid rgba(202, 165, 106, 0.18);
+  border-top: 1px solid rgba(199, 172, 140, 0.18);
   padding: var(--space-8) 0;
 }
 
