@@ -14,6 +14,12 @@ import socialLinks from "../data/social-links.json";
  * Variables/origin: events and socialLinks are imported from src/data/ so previews can change without page code edits.
  */
 export default function IndexPage() {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const upcomingEvents = events
+    .filter((event) => new Date(`${event.date}T00:00:00`) >= today)
+    .sort((first, second) => first.date.localeCompare(second.date));
+
   return (
     <Layout>
       <section className="hero">
@@ -30,7 +36,11 @@ export default function IndexPage() {
       </section>
 
       <Section eyebrow="Next up" title="Upcoming dates">
-        <EventList events={events} isPreview />
+        <EventList
+          events={upcomingEvents}
+          isPreview
+          emptyMessage="No upcoming shows announced right now. Check back soon."
+        />
         <Link className="text-link" to="/dates/">
           View all dates
         </Link>

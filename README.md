@@ -413,6 +413,10 @@ Used by the landing page preview and the full dates page. Each event object supp
 * `city`: city/region display text.
 * `location`: short context line, such as the show format or room description.
 * `ticketUrl`: optional booking or ticket link.
+* `photo`: optional image path or URL shown for previous shows. Omit it to keep the styled photo placeholder.
+* `photoAlt`: optional accessible description of the photo; a venue-based description is used by default.
+
+Events are automatically split by date: today and future dates appear under upcoming shows, while older dates appear under previous shows (newest first). To add a local show photo, copy it into `static/img/` and set `photo` to a path such as `/img/my-show.jpg`.
 
 ## `src/data/members.json`
 

@@ -239,6 +239,40 @@ main {
   color: var(--color-accent);
 }
 
+.event-list__empty {
+  background: rgba(23, 20, 16, 0.5);
+  border: 1px dashed rgba(199, 172, 140, 0.28);
+  border-radius: 1rem;
+  padding: var(--space-5);
+}
+
+.event-card__photo,
+.event-card__photo-placeholder {
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(199, 172, 140, 0.18);
+  border-radius: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.event-card__photo {
+  object-fit: cover;
+}
+
+.event-card__photo-placeholder {
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(183, 161, 135, 0.24), rgba(7, 6, 5, 0.3)),
+    var(--color-surface);
+  color: var(--color-accent-soft);
+  display: flex;
+  font-size: 0.75rem;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .member-card {
   display: grid;
   gap: var(--space-3);
@@ -307,6 +341,10 @@ main {
   .event-card {
     align-items: center;
     grid-template-columns: 10rem 1fr;
+  }
+
+  .event-card--with-photo {
+    grid-template-columns: minmax(12rem, 0.8fr) 9rem minmax(0, 1.2fr);
   }
 
   .member-grid,
