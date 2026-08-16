@@ -273,7 +273,19 @@ main {
 }
 
 .social-links {
-  grid-template-columns: repeat(auto-fit, minmax(8rem, max-content));
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, 8rem);
+}
+
+.social-links a {
+  align-items: center;
+  aspect-ratio: 1;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 0;
+  padding: var(--space-3);
+  text-align: center;
+  width: 8rem;
 }
 
 .site-footer {
